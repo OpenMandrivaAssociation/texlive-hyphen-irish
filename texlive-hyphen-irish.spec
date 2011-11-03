@@ -1,5 +1,11 @@
+# revision 23092
+# category TLCore
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-hyphen-irish
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	Irish hyphenation patterns
 Group:		Publishing
@@ -48,6 +54,7 @@ more information.
 %_texmf_language_dat_d/hyphen-irish
 %_texmf_language_def_d/hyphen-irish
 %_texmf_language_lua_d/hyphen-irish
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,6 +63,8 @@ more information.
 %build
 
 %install
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-irish <<EOF
 %% from hyphen-irish:
