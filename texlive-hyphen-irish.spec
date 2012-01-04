@@ -46,12 +46,12 @@ more information.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-irish <<EOF
-%% from hyphen-irish:
+\%\% from hyphen-irish:
 irish loadhyph-ga.tex
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-irish <<EOF
-%% from hyphen-irish:
+\%\% from hyphen-irish:
 \addlanguage{irish}{loadhyph-ga.tex}{}{2}{3}
 EOF
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
