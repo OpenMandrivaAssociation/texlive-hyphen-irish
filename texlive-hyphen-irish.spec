@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-irish
-Version:	20111103
-Release:	2
+Version:	20120124
+Release:	1
 Summary:	Irish hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -46,14 +46,16 @@ more information.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-irish <<EOF
-\%\% from hyphen-irish:
+\%% from hyphen-irish:
 irish loadhyph-ga.tex
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-irish
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-irish <<EOF
-\%\% from hyphen-irish:
+\%% from hyphen-irish:
 \addlanguage{irish}{loadhyph-ga.tex}{}{2}{3}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-irish
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-irish <<EOF
 -- from hyphen-irish:
