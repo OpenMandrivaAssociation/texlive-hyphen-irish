@@ -68,3 +68,25 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-irish <<EOF
 		hyphenation = 'hyph-ga.hyp.txt',
 	},
 EOF
+
+
+%changelog
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120611-1
++ Revision: 804790
+- Update to latest release.
+
+* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120124-1
++ Revision: 767562
+- Add workaround to rpm bug that broke hyphenation files
+
+* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
++ Revision: 759922
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
++ Revision: 718664
+- texlive-hyphen-irish
+- texlive-hyphen-irish
+- texlive-hyphen-irish
+- texlive-hyphen-irish
+
