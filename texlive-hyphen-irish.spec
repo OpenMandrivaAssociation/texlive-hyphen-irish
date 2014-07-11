@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-irish
 Version:	20120611
-Release:	6
+Release:	7
 Summary:	Irish hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
